@@ -1,4 +1,4 @@
-gline = [ ['Month','umich.edu','ucdavis.edu','ufp.pt','indiana.edu','berkeley.edu','uct.ac.za','columbia.edu','mac.com','mtu.edu','gmail.com'],
-['2005',57,11,10,12,12,14,13,12,11,10],
-['2006',17,11,12,7,5,3,3,3,1,2]
+gline = [ ['Month','umich.edu','ucdavis.edu','ufp.pt','indiana.edu','berkeley.edu','uct.ac.za','columbia.edu','mac.com','mtu.edu','gmail.com','unl.edu','virginia.edu','weber.edu','etudes.org','cam.ac.uk','stanford.edu','unicon.net','hull.ac.uk','rsmart.com','gatech.edu','aeroplanesoftware.com','uea.ac.uk','earthlink.net','northwestern.edu','ucmerced.edu','yale.edu','zmml.uni-bremen.de','ucla.edu','yahoo.com','jhu.edu','ust.hk','uiuc.edu','unisa.ac.za','rutgers.edu','syr.edu','chillco.com','ruc.dk','uva.nl','fhda.edu','yahoo.co.in','lafaspot.com','mein-design.nl','suny.edu','asu.edu','immagic.com','dri.edu','umass.edu','anu.edu.au','edegger.com','it.su.se','ideasaplicadas.com','holidaydiver.com','edison.edu','rice.edu','cua.edu'],
+['2005',57,11,10,12,12,14,13,12,11,10,12,9,8,5,7,4,6,8,6,8,5,5,4,5,4,5,4,3,2,3,3,3,0,0,2,2,2,2,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0],
+['2006',17,11,12,7,5,3,3,3,1,2,0,1,2,5,2,5,3,1,2,0,3,2,2,0,1,0,1,1,1,0,0,0,3,3,0,0,0,0,1,1,2,2,0,0,0,0,0,0,0,0,0,1,1,1,1]
 ];

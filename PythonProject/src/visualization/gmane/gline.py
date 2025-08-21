@@ -1,6 +1,26 @@
 import sqlite3
 import time
 import zlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+def draw(orgs,months,counts):
+    plt.figure(figsize=(12, 6))
+
+    for org in orgs:
+        y_values = []
+        for month in months:
+            key = (month, org)
+            y_values.append(counts.get(key, 0))
+        plt.plot(months, y_values, '-o', label=org)
+
+    plt.xlabel("years")
+    plt.ylabel("Number of Messages")
+    plt.title("Top 10 Organizations by Messages per Year")
+    plt.xticks(rotation=45)
+    plt.legend(loc="upper right")
+    plt.tight_layout()
+    plt.show()
 
 conn = sqlite3.connect('index.sqlite')
 cur = conn.cursor()
@@ -27,7 +47,7 @@ for (message_id, message) in list(messages.items()):
 
 # pick the top schools
 orgs = sorted(sendorgs, key=sendorgs.get, reverse=True)
-orgs = orgs[:10]
+# orgs = orgs[:10]
 print("Top 10 Organizations")
 print(orgs)
 
@@ -40,7 +60,7 @@ for (message_id, message) in list(messages.items()):
     if len(pieces) != 2 : continue
     dns = pieces[1]
     if dns not in orgs : continue
-    month = message[3][:7]
+    month = message[3][:4]
     if month not in months : months.append(month)
     key = (month, dns)
     counts[key] = counts.get(key,0) + 1
@@ -66,5 +86,9 @@ for month in months:
 fhand.write("\n];\n")
 fhand.close()
 
+draw(orgs,months,counts)
+
 print("Output written to gline.js")
 print("Open gline.htm to visualize the data")
+
+
